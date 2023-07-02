@@ -11,12 +11,17 @@
 //     console.log('NodeJS server is running on port: 3000');
 // })
 
-const express = require('express')
+// const express = require('express')
+import express from "express";
+import configViewEngine from "./configs/viewEngine";
 const app = express()
 const port = 3000
 
+configViewEngine(app)
+
 app.get('/', (req, res) => {
-    res.send('Hello World! thai thanh')
+    // res.send('Hello World! thai thanh')
+    res.render("test/index.ejs")
 })
 
 app.listen(port, () => {
