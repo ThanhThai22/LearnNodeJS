@@ -14,3 +14,4 @@ LearnNodeJS
 - di chuyển file server.js vào bên trong thư mục src
 - mở file package.json => sửa "start": "node server.js" thành => "start": "nodemon --exec babel-node src/server.js"
 - sau đó thay vì chạy lệnh 'node server.js' để khởi động server thì bây h ta có thể sử dụng lệnh => 'npm start' 1 lần duy nhất
+- tải thêm package dotenv để khai báo biến môi trường => npm install --save-exact dotenv@10.0.0
