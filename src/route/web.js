@@ -9,6 +9,7 @@ const initWebRoute = (app) => {
     //     res.render("test/index.ejs")
     // })
     //viết theo mô hình MVC
+    // app.METHOD(PATH, HANDLER)
     router.get('/', HomeController.getHomePage); //ko đc thêm dấu () vì sẽ gọi thẳng xuống tk con
 
     router.get('/about', (req, res) => {
