@@ -30,3 +30,11 @@ LearnNodeJS
 - bên file server.js import initWebRoute vào
 - bên controller tạo file homecontroller.js
 - bên trong file web.js import thêm Homecontroller.js để thực hiện mô hình MVC => di chuyển res.render(..) qua Homepage và return nó.
+  -------------------HTTP Method and Use Database---------------------
+  * app.METHOD(PATH, HANDLER)
++ GET: khi server tra ve thong tin cho nguoi dung
++ CRUD tồn tại trong mọi lĩnh vực app, mobile, game, web, .. => create, read, update, delete tương ứng với mỗi Method => POST, GET, PUT, DELETE
++ suwjp phân biệt giữa mongoDB và SQL (noSQL và SQL) tùy vào bài toán trong chương trình để sử dụng sql hay noSQL
++ install gói mysql2 => 'npm install --save-exact mysql2@2.3.0'
++ sử dụng xampp để xử lý database giống như phần phát triển hệ thống web
++ vaof trang 'https://www.npmjs.com/package/mysql2' để lấy code kết nối với database
