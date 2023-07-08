@@ -19,7 +19,7 @@ let getHomePage = (req, res) => {
                 })
             });
             // console.log(fields); // fields contains extra meta data about results, if available
-            return res.render("test/index.ejs", { dataUser: JSON.stringify(data) })
+            return res.render("index.ejs", { dataUser: data, test: 'abc string' })
         }
     );
 
