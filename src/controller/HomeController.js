@@ -1,5 +1,6 @@
 import { json } from "body-parser";
 import pool from "../configs/connectDB";
+import { Router } from "express";
 
 let getHomePage = async (req, res) => {
 
@@ -39,7 +40,15 @@ let getDetailPage = async (req, res) => {
     return res.send(JSON.stringify(user))
 }
 
+let createNewUser = async (req, res) => {
+    // console.log(req.body)
+    let { firstname, lastname, email, address } = req.body; //phuong phap destructuring
+    await pool.execute('insert into users(firstname, lastname, email, address) values (?, ?, ?, ?)', [firstname, lastname, email, address]);
+    return res.redirect('/');
+}
+
 module.exports = {
     getHomePage,
-    getDetailPage
+    getDetailPage,
+    createNewUser
 }

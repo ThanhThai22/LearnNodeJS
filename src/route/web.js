@@ -12,9 +12,11 @@ const initWebRoute = (app) => {
     // app.METHOD(PATH, HANDLER)
     router.get('/', HomeController.getHomePage); //ko đc thêm dấu () vì sẽ gọi thẳng xuống tk con
     router.get('/detail/user/:id', HomeController.getDetailPage)
+    router.post('/create-new-user', HomeController.createNewUser)
     router.get('/about', (req, res) => {
         res.send('Thanh Thai')
     })
+
 
     return app.use('/', router); //tiền tố trước khi thêm route '/' nếu '/abc' thì '/abc/about' dùng để sau này sử dụng 'api/version' 
 }
