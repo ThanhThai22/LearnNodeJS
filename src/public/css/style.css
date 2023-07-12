@@ -50,3 +50,21 @@ body {
     margin-top: 15px;
     cursor: pointer;
 }
+
+.btn-delete {
+    display: inline-block;
+}
+
+.update-user-container {
+    text-align: center;
+}
+
+.update-user-container label {
+    margin-top: 15px;
+    display: block;
+}
+
+.update-user-container .btn-save {
+    margin-top: 15px;
+    cursor: pointer;
+}
