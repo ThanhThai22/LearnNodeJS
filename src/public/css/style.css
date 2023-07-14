@@ -68,3 +68,15 @@ body {
     margin-top: 15px;
     cursor: pointer;
 }
+
+.btn-submit-file {
+    margin-top: 15px;
+}
+
+.upload-file-container {
+    padding: 15px;
+}
+
+.upload-file-container label {
+    display: block;
+}
