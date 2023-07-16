@@ -18,10 +18,19 @@ import initWebRoute from "./route/web";
 import initAPIRoute from "./route/api";
 // import connection from "./configs/connectDB";
 require('dotenv').config();
+var morgan = require('morgan');
 
 const app = express()
 const port = process.env.PORT;
 
+app.use((req, res, next) => {
+    console.log("Run into >>");
+    console.log(req.method)
+    next();
+});
+app.use(morgan('combined'));
+
+//config middleware de su dung ben web.js
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -34,7 +43,10 @@ initWebRoute(app);
 //init API route
 initAPIRoute(app);
 
-
+//handle 404 not found (dung middleware o tang cao nhat)
+app.use((req, res) => {
+    return res.render('404.ejs')
+});
 
 
 app.listen(port, () => {
